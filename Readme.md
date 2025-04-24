@@ -1,75 +1,62 @@
-📊 Proyek UTS Praktikum Machine Learning
-Nama: Ade Ripaldi Nuralim
-NIM: 1227050003
-Mata Kuliah: Praktikum D#
-Judul Proyek: Klasifikasi Kelayakan Kredit Komputer dengan Model Decision Tree
+# 📊 UTS Praktikum Machine Learning: Klasifikasi Kelayakan Kredit Komputer dengan Decision Tree
 
-📌 Deskripsi Proyek
-Proyek ini bertujuan untuk membangun model klasifikasi menggunakan algoritma Decision Tree guna memprediksi apakah seseorang layak atau tidak layak mendapatkan kredit komputer. Prediksi didasarkan pada sejumlah fitur seperti:
+## 📌 Identitas
+- **Nama:** Ade Ripaldi Nuralim  
+- **NIM:** 1227050003  
+- **Mata Kuliah:** Praktikum D#  
 
-Usia
+## 🎯 Deskripsi Proyek
+Proyek ini membangun model klasifikasi menggunakan algoritma **Decision Tree** untuk memprediksi kelayakan kredit komputer berdasarkan fitur:
+- Usia
+- Penghasilan
+- Status Mahasiswa
+- Rating Kredit  
 
-Penghasilan
+Model dievaluasi dengan metrik akurasi, precision, recall, dan confusion matrix.
 
-Status Mahasiswa
+## 📁 Dataset
+Dataset tersedia di: [Klik untuk mengunduh dataset](https://drive.google.com/file/d/1krLRWedghy_ysJ2N6i-1GJ-ZQUmnu6eu/view) *(pastikan tautan valid)*    
 
-Rating Kredit
+## ⚙️ Teknik dan Tools
+- **Algoritma:** Decision Tree Classifier  
+- **Kriteria Split:** Entropy (Information Gain)  
+- **Bahasa Pemrograman:** Python  
+- **Library:** scikit-learn, pandas, numpy, matplotlib  
 
-Model ini dilatih dan diuji pada dataset yang disediakan, kemudian dievaluasi menggunakan metrik performa umum seperti akurasi, precision, recall, serta confusion matrix.
+## 📊 Hasil Evaluasi Model
+### 🔢 Performa Model
+- **Akurasi:** 80.5% (data uji)  
+- **Classification Report:**  
 
-📁 Dataset
-Dataset yang digunakan dapat diakses melalui tautan berikut:
-Klik untuk mengunduh dataset
+| Kelas       | Precision | Recall |
+|-------------|-----------|--------|
+| Tidak Layak (0) | 0.70      | 0.80   |
+| Layak (1)       | 0.88      | 0.81   |
 
-⚙️ Teknik dan Tools
-Algoritma: Decision Tree Classifier
+### 📉 Confusion Matrix
+|                  | Prediksi 0 | Prediksi 1 |
+|------------------|------------|------------|
+| **Aktual 0**     | 57         | 14         |
+| **Aktual 1**     | 25         | 104        |
 
-Criterion: Entropy (Information Gain)
+## 🔍 Analisis dan Kesimpulan
+### 💡 Temuan Utama
+1. Model menunjukkan performa seimbang dengan akurasi **81%**.  
+2. Prediksi "Layak" lebih presisi (**precision 88%**) dibanding "Tidak Layak".  
+3. Terdapat **25 false negatives** (prediksi "Tidak Layak" padahal seharusnya "Layak").  
 
-Bahasa Pemrograman: Python
+### ⚠️ Potensi Masalah
+- **Overfitting:** Probabilitas 1.00 pada data baru mengindikasikan model mungkin terlalu spesifik.  
+- **Ketidakseimbangan Data:** Perlu dicek distribusi kelas dalam dataset.  
 
-Library utama: scikit-learn, pandas, numpy, matplotlib
+### 🚀 Rekomendasi Pengembangan
+1. **Optimasi Model:**  
+   - Pruning untuk mengurangi overfitting.  
+   - Eksperimen dengan algoritma lain (Random Forest, SVM).  
+2. **Peningkatan Data:**  
+   - Penambahan sampel atau fitur relevan.  
+   - Handling imbalance class (jika ada).  
 
-✅ Hasil Evaluasi Model
-Model Decision Tree yang dibangun menunjukkan hasil evaluasi sebagai berikut:
+---
 
-Akurasi pada data uji: 80.5%
-
-Classification Report:
-
-Tidak Layak (0):
-
-Precision: 0.70
-
-Recall: 0.80
-
-Layak (1):
-
-Precision: 0.88
-
-Recall: 0.81
-
-Confusion Matrix:
-
-57 benar klasifikasi "Tidak Layak"
-
-104 benar klasifikasi "Layak"
-
-14 salah klasifikasi "Tidak Layak" sebagai "Layak"
-
-25 salah klasifikasi "Layak" sebagai "Tidak Layak"
-
-🔍 Analisis dan Kesimpulan
-Model mampu mengklasifikasikan data dengan cukup baik, terlihat dari akurasi yang mendekati 81%. Meskipun terdapat beberapa kesalahan klasifikasi, secara keseluruhan model memberikan hasil yang seimbang antara kedua kelas.
-
-Selain itu, saat diuji dengan data baru, model memberikan prediksi “Tidak Layak” dengan probabilitas 1.00, yang menunjukkan tingkat kepercayaan sangat tinggi dari model. Hal ini bisa terjadi karena pola data serupa telah banyak muncul pada data pelatihan atau bisa jadi model terlalu spesifik karena overfitting.
-
-💡 Kesimpulan Akhir
-Decision Tree dengan kriteria entropy adalah metode yang cukup efektif untuk digunakan dalam kasus klasifikasi kelayakan kredit. Namun, untuk meningkatkan generalisasi model di masa depan, bisa dilakukan:
-
-Pruning untuk menghindari overfitting
-
-Eksperimen dengan algoritma lain seperti Random Forest atau SVM
-
-Penambahan data dan fitur baru untuk memperkaya informasi
-
+© 2024 Ade Ripaldi Nuralim | Proyek UTS Machine Learning  
